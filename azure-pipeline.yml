@@ -2,18 +2,18 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'Default'
 
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'Deploy ARM Template'
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'MyAzureServiceConnection'
-    subscriptionId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+    azureResourceManagerConnection: 'aciserviceconnection'
+    subscriptionId: '94b32def-28a7-475d-bbe4-bfa09615697a'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'MyResourceGroup'
-    location: 'East US'
+    resourceGroupName: 'bharathrs'
+    location: 'UKSouth'
     templateLocation: 'Linked artifact'
     csmFile: 'templates/azuredeploy.json'
     csmParametersFile: 'templates/azuredeploy.parameters.json'
