@@ -4,7 +4,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "storageAccountName": {
-      "value": "manistg"
+      "value": "kbcstg9"
     },
     "location": {
       "value": "UKSouth"
@@ -13,4 +13,4 @@
       "value": "Standard_LRS"
     }
   }
-}
+} 
