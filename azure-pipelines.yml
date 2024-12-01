@@ -15,4 +15,10 @@ steps:
     azureSubscription: 'aciserviceconnection'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
+    inlineScript: 'az account set --subscription 94b32def-28a7-475d-bbe4-bfa09615697a'
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'aciserviceconnection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
     inlineScript: 'az acr create --name armreg3 --resource-group bharathrs --sku SKU --location UKSouth'
